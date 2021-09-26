@@ -1,12 +1,18 @@
+h2{
+    text-align: left;
+    padding: 10px 30px 0px 280px;
+}
 .shop-container{
     display: grid;
     grid-template-columns:3fr 1fr;
 }
 .course-container{
-    border-right: 1px solid lightgray;
-    padding: 20px;
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+}
+.cart-container{
+    padding-right: 20px;
 }

@@ -26,7 +26,9 @@ const Header = () => {
                         Own online learning <br /> Platform</h1>
                     <p>Unlimited access to all 60+ instructors.</p>
                     <p><small> 2 passes (with access to all classes) for $240</small></p>
+                    <h3>Total Budget: 200 Million</h3>
                     <button>Explore More</button>
+                   
                 </div>
                 <div>
                     <img className="background-girl" src={girl} alt="" />

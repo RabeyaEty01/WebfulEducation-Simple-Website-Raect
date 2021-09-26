@@ -5,7 +5,7 @@ const Courses = (props) => {
 
     return (
         <div>
-            <div class="card h-100 rounded-3">
+            <div class="card h-100 rounded-3 bg-light shadow">
                 <img className="img-fluid p-2" src={img} alt="" />
                 <div class="card-body">
                     <h5 class="card-title text-primary fw-bold">{name}</h5>
@@ -15,7 +15,7 @@ const Courses = (props) => {
                     <p class="card-text text-start"><small>Credit: {credit}</small></p>
                     <div class="d-flex justify-content-between">
                         <h5 class="card-title fw-bold">Price: ${price}</h5>
-                        <button class="rounded-3 bg-warning border-1 fw-bold">Enroll Now</button>
+                        <button class="rounded-3 bg-warning border-1 fw-bold"  onClick={() => props.handleAddToCart(props.course)} >Enroll Now</button>
                     </div>
 
                 </div>
