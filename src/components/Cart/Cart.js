@@ -1,7 +1,8 @@
 import React from 'react';
 import './Cart.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollarSign, faBook, faShoppingCart}from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign, faBook, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 
 const Cart = (props) => {
     const { cart } = props;
@@ -14,8 +15,8 @@ const Cart = (props) => {
     const total = cart.reduce(totalReducer, 0);
 
     return (
-        <div className="sticky-top">
-             <h4 className="text-center fw-bold pb-3">Order Summery{cartIcon}</h4>
+        <div>
+            <h4 className="text-center fw-bold pb-3">Order Summery{cartIcon}</h4>
             <table class="table table-bordered border-primary">
                 <thead>
                     <tr className="table-active">
@@ -30,6 +31,7 @@ const Cart = (props) => {
                     </tr>
                 </tbody>
             </table>
+           
         </div>
     );
 };

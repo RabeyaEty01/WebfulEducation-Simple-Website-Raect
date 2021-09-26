@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Courses from '../Courses/Courses';
+import NameCard from '../NameCard/NameCard';
 import './Shop.css';
 
 
@@ -8,6 +9,7 @@ const Shop = () => {
 
     const [courses, setCourses] = useState([]);
     const [cart, setCart] = useState([]);
+    const [nameCard, setNameCard] = useState([]);
 
     useEffect(() => {
         fetch('./courseData.JSON')
@@ -17,6 +19,11 @@ const Shop = () => {
 
 
     const handleAddToCart = (course) => {
+        //console.log(course.name);
+        //for button clicked show  name
+        const newCard =[...nameCard, course];
+        setNameCard(newCard);
+       //for change cart state 
         const newCart = [...cart, course];
         setCart(newCart);
 
@@ -32,11 +39,17 @@ const Shop = () => {
                             key={course.id}
                             course={course}
                             handleAddToCart={handleAddToCart}
+
+
                         ></Courses>)
                     }
+
                 </div>
                 <div className="cart-container">
                     <Cart cart={cart}></Cart>
+                    {
+                        nameCard.map(nameCard=> <NameCard nameCard={nameCard}></NameCard>)
+                    }
                 </div>
             </div>
         </div>

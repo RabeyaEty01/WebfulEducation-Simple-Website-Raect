@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faClock,faCalendarAlt,faChalkboardTeacher,faBars ,faDollarSign}from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faClock, faCalendarAlt, faChalkboardTeacher, faBars, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 const Courses = (props) => {
-    const { name, img, startDate, duration, instructors, credit, price, } = props.course;
+    const { name, img, startDate, duration, instructors, credit, price } = props.course;
     //All icons
     const arrowIcon = <FontAwesomeIcon icon={faArrowRight} />
     const clockIcon = <FontAwesomeIcon className="text-success" icon={faClock} />
@@ -14,17 +14,19 @@ const Courses = (props) => {
 
     return (
         <div>
-            <div class="card h-100 rounded-3 bg-light shadow">
+            <div className="card h-100 rounded-3 bg-light shadow">
                 <img className="img-fluid p-2" src={img} alt="" />
-                <div class="card-body">
-                    <h5 class="card-title text-primary fw-bold">{name}</h5>
-                    <p class="card-text text-start"><small>{teacherIcon} Instructors: {instructors}</small></p>
-                    <p class="card-text text-start"><small>{clockIcon} Start Date:  {startDate}</small></p>
-                    <p class="card-text text-start"><small>{calenderIcon} Duration: {duration}</small></p>
-                    <p class="card-text text-start"><small>{barIcon} Credit: {credit}</small></p>
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title fw-bold">Price: {dollerIcon}{price}</h5>
-                        <button class="rounded-3 bg-warning border-1 fw-bold"  onClick={() => props.handleAddToCart(props.course)} >Enroll Now {arrowIcon}</button>
+                <div className="card-body">
+                    <h5 className="card-title text-primary fw-bold">{name}</h5>
+                    <p className="card-text text-start"><small>{teacherIcon} Instructors: {instructors}</small></p>
+                    <p className="card-text text-start"><small>{clockIcon} Start Date:  {startDate}</small></p>
+                    <p className="card-text text-start"><small>{calenderIcon} Duration: {duration}</small></p>
+                    <p className="card-text text-start"><small>{barIcon} Credit: {credit}</small></p>
+                    <div className="d-flex justify-content-between">
+                        <h5 className="card-title fw-bold">Price: {dollerIcon}{price}</h5>
+                        <button className="rounded-3 bg-warning border-1 fw-bold" onClick={() =>
+                            props.handleAddToCart(props.course)
+                        } >Enroll Now {arrowIcon}</button>
                     </div>
 
                 </div>
