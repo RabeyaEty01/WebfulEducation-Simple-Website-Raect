@@ -39,8 +39,6 @@ const Shop = () => {
                             key={course.id}
                             course={course}
                             handleAddToCart={handleAddToCart}
-
-
                         ></Courses>)
                     }
 

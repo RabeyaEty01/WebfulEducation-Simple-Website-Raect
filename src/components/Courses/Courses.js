@@ -23,7 +23,7 @@ const Courses = (props) => {
                     <p className="card-text text-start"><small>{calenderIcon} Duration: {duration}</small></p>
                     <p className="card-text text-start"><small>{barIcon} Credit: {credit}</small></p>
                     <div className="d-flex justify-content-between">
-                        <h5 className="card-title fw-bold">Price: {dollerIcon}{price}</h5>
+                        <h6 className="card-title fw-bold">Price: {dollerIcon}{price}</h6>
                         <button className="rounded-3 bg-warning border-1 fw-bold" onClick={() =>
                             props.handleAddToCart(props.course)
                         } >Enroll Now {arrowIcon}</button>
